@@ -9,24 +9,42 @@ namespace ProblemSolving
            string[] parts = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
 
-           long p = long.Parse(parts[0]); 
-           long d = long.Parse(parts[1]); 
-           long k = long.Parse(parts[2]); 
+           long a = long.Parse(parts[0]);
+           long b = long.Parse(parts[1]);
+           long h = long.Parse(parts[2]);
 
-           long ans = p;
-
-           long option1 = Math.Max(0 , p-d);
-
-            ans = Math.Min(ans , option1);
-
-            if( p >= k)
+           if( a < b)
             {
-                long option2 = p / 2;
-                ans = Math.Min(ans , option2);
+                if( h>=a && h< b){
+                    System.Console.WriteLine("YES");
+                }
+                else
+                {
+                    System.Console.WriteLine("NO");
+                }
             }
-           
-           System.Console.WriteLine(ans);
 
+            else if(a > b)
+            {
+                if(h>=a || h< b)
+                {
+                    System.Console.WriteLine("YES");
+                }
+                 else
+                {
+                    System.Console.WriteLine("NO");
+                }
+            }
+
+            else if( a == b)
+            {
+                
+                
+                    System.Console.WriteLine("YES");
+                
+                 
+            }
+            
            
            
 
