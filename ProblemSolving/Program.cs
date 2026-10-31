@@ -8,43 +8,29 @@ namespace ProblemSolving
         {
            string[] parts = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
+           
+           
 
-           long a = long.Parse(parts[0]);
-           long b = long.Parse(parts[1]);
-           long h = long.Parse(parts[2]);
+            long x1 = long.Parse(parts[0]);
+            long y1 = long.Parse(parts[1]);
+            long x2 = long.Parse(parts[2]);
+            long y2 = long.Parse(parts[3]);
 
-           if( a < b)
+            long start = Math.Max(x1 , x2);
+
+            long end = Math.Min(y1 , y2);
+
+            if(start <= end)
             {
-                if( h>=a && h< b){
-                    System.Console.WriteLine("YES");
-                }
-                else
-                {
-                    System.Console.WriteLine("NO");
-                }
+                System.Console.WriteLine((end - start ) + 1);
             }
-
-            else if(a > b)
+            else
             {
-                if(h>=a || h< b)
-                {
-                    System.Console.WriteLine("YES");
-                }
-                 else
-                {
-                    System.Console.WriteLine("NO");
-                }
+                Console.WriteLine(0);
             }
+           
 
-            else if( a == b)
-            {
-                
-                
-                    System.Console.WriteLine("YES");
-                
-                 
-            }
-            
+           
            
            
 
