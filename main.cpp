@@ -5,6 +5,7 @@
 #include<iostream>
 #include<string>
 #include <vector>
+#include <iomanip>
 #include<map>
 #include<queue>
 #include<stack>
@@ -125,20 +126,18 @@ bool hasAdjacent(vector<int>&v , int target) {
 int main() {
 
     fast();
-    int x = 0 , y = 0 , n =0;
-    cin>>x>>y>>n;
-    for (int i = 1 ; i<= n ; i++) {
-        if (i % x == 0 && i % y ==0) {
-            cout<<"FizzBuzz"<<'\n';
-        }
-        else if (i%x ==0) {
-            cout<<"Fizz"<<'\n';
-        }
-        else if (i % y ==0) {
-            cout<<"Buzz"<<'\n';
-        }
-        else cout<<i<<'\n';
+    unsigned int t = 0 ;  cin>>t;
+
+    while (t--) {
+        double s = 0.0 ,  v = 0.0;
+        cin>>s>>v;
+        double timeInMin =  v / 60;
+
+        cout<<setprecision(6)<<fixed<<(s*timeInMin)*1000<<'\n';
+
+
     }
+
 
     return 0;
 }
