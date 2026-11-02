@@ -125,17 +125,20 @@ bool hasAdjacent(vector<int>&v , int target) {
 int main() {
 
     fast();
-    int n = 0 ; cin>>n;
-    long long sum = 0 , evenCount = 0 , oddCount = 0;
-    while (n--) {
-        int x = 0;
-        cin>>x;
-        sum +=x;
-
-        if (x % 2 ==0) evenCount++;
-        else oddCount++;
+    int x = 0 , y = 0 , n =0;
+    cin>>x>>y>>n;
+    for (int i = 1 ; i<= n ; i++) {
+        if (i % x == 0 && i % y ==0) {
+            cout<<"FizzBuzz"<<'\n';
+        }
+        else if (i%x ==0) {
+            cout<<"Fizz"<<'\n';
+        }
+        else if (i % y ==0) {
+            cout<<"Buzz"<<'\n';
+        }
+        else cout<<i<<'\n';
     }
-    cout<<sum<<" "<<oddCount<<" "<<evenCount<<'\n';
 
     return 0;
 }
