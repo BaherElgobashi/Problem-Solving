@@ -127,18 +127,7 @@ int main() {
 
     fast();
     string s = ""; cin>>s;
-    bool x = true;
-    for (int i = 0 ; i < s.size(); i++) {
-        if (s[i] != s[s.size()-1-i]) {
-            x = false;
-        }
-    }
-    if (x) {
-        cout<<"YES"<<'\n';
-    }
-    else {
-        cout<<"NO"<<'\n';
-    }
+    cout<<s[0]<<'\n';
 
 
     return 0;
