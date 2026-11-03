@@ -126,16 +126,19 @@ bool hasAdjacent(vector<int>&v , int target) {
 int main() {
 
     fast();
-    unsigned int a = 0 , b = 0; cin>>a>>b;
-
-
-    int years = 0;
-    while (a <= b) {
-        a *= 3;
-        b *= 2;
-        years++;
+    string s = ""; cin>>s;
+    bool x = true;
+    for (int i = 0 ; i < s.size(); i++) {
+        if (s[i] != s[s.size()-1-i]) {
+            x = false;
+        }
     }
-    cout<<years<<'\n';
+    if (x) {
+        cout<<"YES"<<'\n';
+    }
+    else {
+        cout<<"NO"<<'\n';
+    }
 
 
     return 0;
