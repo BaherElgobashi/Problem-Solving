@@ -121,18 +121,29 @@ bool hasAdjacent(vector<int>&v , int target) {
     return false;
 }
 
+bool isPrime(int x ) {
+    if (x < 2)
+        return false;
+
+    for (int i = 2 ; i * i <= x ;i++) {
+        if (x % i == 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
 
 
 int main() {
     int n = 0 ; cin>>n;
-    for (int i = 1 ; i <= n;i++) {
-        for (int j = 1 ; j <= i; j++) {
-            cout<<'*';
-
+    for (int i = 2; i <=n ; ++i) {
+        if (isPrime(i)) {
+            cout<<i<<' ';
         }
-        cout<<'\n';
-    }
 
+    }
+    cout << "\n";
 
     return 0;
 }
